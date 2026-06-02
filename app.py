@@ -530,16 +530,6 @@ if run_analysis:
 
             sma_results.append(result)
 
-        # EMA
-
-        if result["Close"] > result["EMA10"]:
-
-            ema_above_results.append(result)
-
-        else:
-
-            ema_below_results.append(result)
-
         # ==========================================
         # SIGNAL BUCKETS
         # ==========================================
