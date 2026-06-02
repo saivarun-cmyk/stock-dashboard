@@ -247,10 +247,14 @@ def analyze_stock(stock_name, symbol, market, option, custom_date):
         # ==========================================
 
         if market == "INDIA":
+
             if symbol.startswith("^"):
                 ticker = symbol
             else:
                 ticker = symbol + ".NS"
+
+        else:
+            ticker = symbol
 
         # ==========================================
         # DOWNLOAD DATA
