@@ -524,6 +524,12 @@ if run_analysis:
 
             ema_below_results.append(result)
 
+        # SMA10
+
+        if result["Distance %"] <= sma_threshold:
+
+            sma_results.append(result)
+
         # EMA
 
         if result["Close"] > result["EMA10"]:
@@ -611,8 +617,7 @@ if run_analysis:
 
     usa_df = pd.DataFrame(usa_results)
 
-    sma_df = pd.DataFrame(sma_results)
-
+    sma_df = pd.DataFrame(sma_results).drop_duplicates(subset=["Stock", "Market"])
     ema_above_df = pd.DataFrame(ema_above_results)
 
     ema_below_df = pd.DataFrame(ema_below_results)
