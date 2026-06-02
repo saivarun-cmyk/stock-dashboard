@@ -524,12 +524,6 @@ if run_analysis:
 
             ema_below_results.append(result)
 
-        # SMA10
-
-        if result["Distance %"] <= sma_threshold:
-
-            sma_results.append(result)
-
         # EMA
 
         if result["Close"] > result["EMA10"]:
